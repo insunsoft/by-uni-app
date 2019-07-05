@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view class="static_banner" @click="to_succ_page()"><image src="../../static/banner/pic_home_banner.png" mode="widthFix" style="width: 100%;height: 100%;"></image></view>
+		<view class="static_banner"><image src="../../static/banner/pic_home_banner.png" mode="widthFix" style="width: 100%;height: 100%;"></image></view>
 		<form>
 			<view class="form-title">
 				<text>基本信息</text>
@@ -24,7 +24,7 @@
 				<view class="cu-form-group form-group-radio">
 					<view class="title">性别</view>
 					<view style="display: flex;">
-						<view style="margin-right: 20upx; display: flex;align-items: center;" v-for="(item, index) in sexs">
+						<view style="margin-right: 20upx; display: flex;align-items: center;" v-for="(item, index) in sexs" :key="index">
 							<radio class=" green_radio radio" :class="radio == item.id ? 'checked' : ''" :checked="radio == item.id ? true : false" :value="item.id"></radio>
 							<text>{{ item.title }}</text>
 						</view>
@@ -72,7 +72,7 @@
 				<text>考级信息</text>
 				<text class="form-title-text" @click="to_desc_page()">考级收费说明</text>
 			</view>
-			<view class="cu-form-group" v-if="index <= 1" v-for="(item, index) in project_list">
+			<view class="cu-form-group" v-if="index <= 1" v-for="(item, index) in project_list" :key="index">
 				<view class="title">专业{{ index + 1 }}</view>
 				<view class="form-item-right">
 					<picker class="lv-picker" mode="multiSelector" @change="project_picker($event, index)" :range="projects" range-key="title">
