@@ -1,0 +1,47 @@
+@import "./colors.less";
+@header_height:100upx;
+body,
+html {
+	--window-top: @header_height;
+	--window-bottom: 0px;
+}
+uni-page-head .uni-page-head {
+	height: @header_height;
+	align-items: center;
+	/* border-bottom: 1px solid #ccc; */
+}
+
+uni-page-head .uni-page-head-bd {
+}
+uni-page-head[uni-page-head-type='default'] ~ uni-page-wrapper {
+	height: calc(100% - @header_height);
+}
+uni-app,
+uni-page-head {
+	height: @header_height;
+}
+
+// 标签tags
+.by-tag {
+	width: 128upx;
+	height: 26px;
+	line-height: 26px;
+	font-size: 12px;
+	text-align: center;
+	background-color: #ccc;
+	border-radius: 13px;
+}
+
+.by-tag-red {
+	background: @red_tag_bg;
+	color: @red_tag_text;
+}
+.by-tag-blue {
+	background: @blue_tag_bg;
+	color: @blue_tag_text;
+}
+.by-tag-gray {
+	background: @gray_tag_bg;
+	color: @gray_tag_text;
+}
+
