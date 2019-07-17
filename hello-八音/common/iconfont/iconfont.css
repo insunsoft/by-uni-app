@@ -1,0 +1,10 @@
+/* 微信小程序 不支持远程URL 故此处使用本地路径 */
+@import url("./font_1019231_wkjwqgl152.css");
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 44upx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

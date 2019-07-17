@@ -1,0 +1,2 @@
+<import src="./city_picker.vue.wxml" />
+    <template is="95c1c644" data="{{ ...$root['0'], $root }}"/>
